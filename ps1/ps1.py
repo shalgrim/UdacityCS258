@@ -50,15 +50,21 @@ from queue_test import *
 def test():
     q = Queue(1)
     assert q.empty()
+    assert not q.full()
     assert q.enqueue(5000)
     assert q.full()
+    assert not q.empty()
     value = q.dequeue()
     assert value == 5000
     assert q.empty()
+    assert not q.full()
     assert q.enqueue(10)
     assert not q.enqueue(100)
     assert q.full()
+    assert not q.empty()
     value = q.dequeue()
     assert value == 10
     value = q.dequeue()
     assert value is None
+    assert q.empty()
+    assert not q.full()
