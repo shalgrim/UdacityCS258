@@ -1,3 +1,12 @@
+'''
+Date: 7/2/12
+Author: Scott Halgrim, shalgrim@hotmail.com
+Functionality:
+    This code tries to break code we know is buggy but don't have access to.
+It is problem set 1 for Udacity CS 258
+URL for this problem set is:
+http://www.udacity.com/view#Course/cs258/CourseRev/1/Unit/81001/Nugget/142001
+'''
 # CORRECT SPECIFICATION:
 #
 # the Queue class provides a fixed-size FIFO queue of integers
@@ -39,7 +48,17 @@
 from queue_test import *
 
 def test():
-    ###Your code here.
-
-
-
+    q = Queue(1)
+    assert q.empty()
+    assert q.enqueue(5000)
+    assert q.full()
+    value = q.dequeue()
+    assert value == 5000
+    assert q.empty()
+    assert q.enqueue(10)
+    assert not q.enqueue(100)
+    assert q.full()
+    value = q.dequeue()
+    assert value == 10
+    value = q.dequeue()
+    assert value is None
