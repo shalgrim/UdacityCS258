@@ -1,12 +1,11 @@
 '''
 Date: 7/2/12
 Author: Scott Halgrim, shalgrim@hotmail.com
-Functionality:
-    This code tries to break code we know is buggy but don't have access to.
-It is problem set 1 for Udacity CS 258
-URL for this problem set is:
-http://www.udacity.com/view#Course/cs258/CourseRev/1/Unit/81001/Nugget/142001
+Functionality: This code tries to break code we know is buggy but don't have access to.  It is problem set 1 for Udacity CS 258
+URL for this problem set is http://www.udacity.com/view#Course/cs258/CourseRev/1/Unit/81001/Nugget/142001
 '''
+# Making a change EOD 7/3/12 to test push after I've been unable to clone
+
 # CORRECT SPECIFICATION:
 #
 # the Queue class provides a fixed-size FIFO queue of integers
