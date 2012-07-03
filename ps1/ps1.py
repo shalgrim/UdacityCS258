@@ -68,3 +68,62 @@ def test():
     assert value is None
     assert q.empty()
     assert not q.full()
+    value = q.dequeue()
+    assert value is None
+    assert q.empty()
+    assert not q.full()
+    q = Queue(2)
+    assert q.empty()
+    assert not q.full()
+    assert q.enqueue(20)
+    assert not q.empty()
+    assert not q.full()
+    value = q.dequeue()
+    assert value == 20
+    assert q.empty()
+    assert not q.full()
+    assert q.enqueue(30)
+    assert not q.empty()
+    assert not q.full()
+    assert q.enqueue(40)
+    assert not q.empty()
+    assert q.full()
+    assert not q.enqueue(50)
+    assert not q.empty()
+    assert q.full()
+    value = q.dequeue()
+    assert value == 30
+    assert not q.full()
+    assert not q.empty()
+    assert q.enqueue(60)
+    assert q.full()
+    assert not q.empty()
+    assert not q.enqueue(70)
+    value = q.dequeue()
+    assert not q.full()
+    assert not q.empty()
+    assert value == 40
+    value = q.dequeue()
+    assert value == 60
+    assert q.empty()
+    assert not q.full()
+    value = q.dequeue()
+    assert value is None
+    assert q.empty()
+    assert not q.full()
+    assert q.enqueue(0)
+    assert not q.empty()
+    assert not q.full()
+    value = q.dequeue()
+    assert value == 0
+    assert q.empty()
+    assert not q.full()
+    assert q.enqueue(-10)
+    assert not q.empty()
+    assert not q.full()
+    value = q.dequeue()
+    assert value == -10
+    assert q.empty()
+    assert not q.full()
+
+
