@@ -121,9 +121,22 @@ def test():
     assert q.enqueue(-10)
     assert not q.empty()
     assert not q.full()
+    assert q.enqueue(-20)
+    assert not q.empty()
+    assert q.full()
+    assert not q.enqueue(-30)
+    assert not q.empty()
+    assert q.full()
     value = q.dequeue()
     assert value == -10
+    assert not q.empty()
+    assert not q.full()
+    value = q.dequeue()
+    assert value == -20
     assert q.empty()
     assert not q.full()
-
+    value = q.dequeue()
+    assert value is None
+    assert q.empty()
+    assert not q.full()
 
