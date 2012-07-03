@@ -149,15 +149,85 @@ def test():
     assert value is None
     assert q.full()
     assert q.empty()
-    q = Queue(-1)
-    assert not q.full()
-    assert q.empty()
-    #assert not q.enqueue(15) # this causes an error, but not an assertion error
+
+    q2 = Queue(3)
+    assert q2.empty()
+    assert not q2.full()
+    assert q2.enqueue(1)
+    assert not q2.empty()
+    assert not q2.full()
+    assert q2.enqueue(2)
+    assert not q2.empty()
+    assert not q2.full()
+    assert q2.enqueue(3)
+    assert not q2.empty()
+    assert q2.full()
+    assert not q2.enqueue(4)
+    assert not q2.empty()
+    assert q2.full()
+    value = q2.dequeue()
+    assert value == 1
+    assert not q2.empty()
+    assert not q2.full()
+    value = q2.dequeue()
+    assert value == 2
+    assert not q2.empty()
+    assert not q2.full()
+    assert q2.enqueue(5)
+    assert not q2.empty()
+    assert not q2.full()
+    value = q2.dequeue()
+    assert value == 3
+    assert not q2.empty()
+    assert not q2.full()
+    assert q2.enqueue(6)
+    assert not q2.empty()
+    assert not q2.full()
+    value = q2.dequeue()
+    assert value == 5
+    assert not q2.empty()
+    assert not q2.full()
+    assert q2.enqueue(7)
+    assert not q2.empty()
+    assert not q2.full()
+    value = q2.dequeue()
+    assert value == 6
+    assert not q2.empty()
+    assert not q2.full()
+    value = q2.dequeue()
+    assert value == 7
+    assert q2.empty()
+    assert not q2.full()
+    value = q2.dequeue()
+    assert value is None
+    assert q2.empty()
+    assert not q2.full()
+
+    # I got this aprt after viewing the solution.  Weird.
+    q16 = Queue(16)
+
+    for i in range(16):
+        assert q16.enqueue(i)
+
+    for i in range(16):
+        value = q16.dequeue()
+        assert value == i
+
+
+
+
+
+
+
+    #q = Queue(-1)
+    #assert not q.full() # I feel like this should be assert q.full(), but then I get the error about the correct code erroring out
+    #assert q.empty()
+    ##assert not q.enqueue(15) # this causes an error, but not an assertion error
+    ##assert not q.full()
+    ##assert q.empty()
+    #value = q.dequeue()
+    #assert value is None
     #assert not q.full()
     #assert q.empty()
-    value = q.dequeue()
-    assert value is None
-    assert not q.full()
-    assert q.empty()
 
 
