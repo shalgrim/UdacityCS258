@@ -139,4 +139,25 @@ def test():
     assert value is None
     assert q.empty()
     assert not q.full()
+    q = Queue(0)
+    assert q.full()
+    assert q.empty()
+    assert not q.enqueue(15)
+    assert q.full()
+    assert q.empty()
+    value = q.dequeue()
+    assert value is None
+    assert q.full()
+    assert q.empty()
+    q = Queue(-1)
+    assert not q.full()
+    assert q.empty()
+    #assert not q.enqueue(15) # this causes an error, but not an assertion error
+    #assert not q.full()
+    #assert q.empty()
+    value = q.dequeue()
+    assert value is None
+    assert not q.full()
+    assert q.empty()
+
 
