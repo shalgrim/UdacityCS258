@@ -60,13 +60,34 @@ def add8(a0,a1,a2,a3,a4,a5,a6,a7,b0,b1,b2,b3,b4,b5,b6,b7,c0):
         c8 = True
     return (s1,s2,s3,s4,s5,s6,s7,s8,c8)
 
+def intToBin(i):
+    assert i >= 0 and i < 256   # not assert as shown to us but quick, easy way for this assignment
+    answer = []
+
+    for j in range(8):
+        answer.append(i%2)
+        newi = i/2
+
+    return answer
+
+
+
 def test():
     # Write test cases that achieve 100% 
     # Statement coverage of add8. You 
     # will need to call add8 multiple 
     # times in order to do this.
     ###Your code here.
-    pass
+    for i in range(256):
+        ibin = intToBin(i)
+
+        for j in range(256):
+            jbin = intToBin(j)
+
+            for c in range(2):
+                add8(ibin[0], ibin[1], ibin[2], ibin[3], ibin[4], ibin[5], ibin[6], ibin[7], 
+                     jbin[0], jbin[1], jbin[2], jbin[3], jbin[4], jbin[5], jbin[6], jbin[7], c)
+               
 
 test()
 
