@@ -28,8 +28,14 @@ def isPrime(number):
 
 def isPrime2(number):  
     ###Your isPrime2 code here.
-
-    pass
+    if number == 2:
+        return True
+    if number<=1 or (number%2)==0:
+        return False
+    for check in range(3,int(math.sqrt(number))+1):  # added +1 to fix
+        if (number%check) == 0:  
+            return False
+    return True
 
 def test():
     assert isPrime(1) == False
@@ -43,6 +49,5 @@ def test():
     assert isPrime(23) == True
     assert isPrime(24) == False
     ###Your test code here.
-
-    pass
+    assert isPrime(9) == False
 
