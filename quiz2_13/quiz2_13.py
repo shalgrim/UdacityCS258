@@ -36,6 +36,8 @@ def stats(lst):
         middle = len(lst_sorted)/2
         median = (lst_sorted[middle] + lst_sorted[middle-1]) / 2
     else:
+         # here is the bug
+         # it will show up on an odd-lengthed list of size > 1
         median = lst_sorted[(len(lst_sorted)/2)-1]
     mode_times = None
     for i in freq.values():
