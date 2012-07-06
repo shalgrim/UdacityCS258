@@ -47,7 +47,9 @@ def test():
     # Change l to something that manages full coverage. You may 
     # need to call stats twice with different input in order 
     # to achieve full coverage.
-    l = [31]
-    stats(l)
+    l1 = [31, 32, 33, 32]
+    l2 = [31, 32, 33, 33, 33, 34, 35]
+    stats(l1)
+    stats(l2)
 
 test()
