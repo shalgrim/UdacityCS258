@@ -36,7 +36,7 @@ def stats(lst):
         middle = len(lst_sorted)/2
         median = (lst_sorted[middle] + lst_sorted[middle-1]) / 2
     else:
-        median = lst_sorted[len(lst_sorted)/2]
+        median = lst_sorted[(len(lst_sorted)/2)-1]
     mode_times = None
     for i in freq.values():
         if mode_times is None or i > mode_times:
@@ -68,7 +68,10 @@ def test1():
 # you've inserted into the stats function.
 def test2():
     ###Your test2 code here.
-    pass
+    l = [31, 31, 1, 2, 2, 1]
+    stats(l)
+    l = [31, 32, 33]
+    stats(l)
 
 test1()
 test2()
