@@ -6,6 +6,11 @@ URL for this problem set is http://www.udacity.com/view#Course/cs258/CourseRev/1
 '''
 # Making a change EOD 7/3/12 to test push after I've been unable to clone
 
+# 7/5 Now I'm at home.  I can see that 7/3/12 push did work.
+# And now I've cloned succesfully at home, but with cmd line
+# and with git extensions via VS.
+# Making a change to see if this push works.
+
 # CORRECT SPECIFICATION:
 #
 # the Queue class provides a fixed-size FIFO queue of integers
