@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "quiz2_12", "quiz2_12.pyproj", "{DAD7D319-2A05-4866-AE0D-BD7ACC7826BC}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "quiz2_13", "..\quiz2_13\quiz2_13.pyproj", "{BA1E8F01-AEDD-49A4-BE46-E2A04198ECEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -11,6 +13,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{DAD7D319-2A05-4866-AE0D-BD7ACC7826BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DAD7D319-2A05-4866-AE0D-BD7ACC7826BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA1E8F01-AEDD-49A4-BE46-E2A04198ECEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA1E8F01-AEDD-49A4-BE46-E2A04198ECEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
