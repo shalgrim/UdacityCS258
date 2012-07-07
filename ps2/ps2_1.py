@@ -63,11 +63,45 @@ class Queue:
         if self.head == self.tail:
             assert (self.size==0) or (self.size==self.max)
 
+def testaq(q):
+    q.checkRep()
+    q.empty()
+    q.full()
+    for i in range(q.size+2):
+        q.enqueue(i)
+        q.checkRep()
+
+    while not q.empty():
+        q.dequeue()
+        q.checkRep()
+    
+    q.dequeue()
+    q.checkRep()
+
+    return
+
 # Add test code to test() that achieves 100% coverage of the 
 # Queue class.
 def test():
     ###Your code here.
-    pass
+
+    # didn't like this
+    #qneg = Queue(-1)
+    #testaq(qneg)
+    #q0 = Queue(0)
+    #testaq(q0)
+
+    q1 = Queue(1)
+    testaq(q1)
+    q2 = Queue(2)
+    testaq(q2)
+
+    # here we will make sure we test self.tail < self.head in checkRep
+    q2 = Queue(2)
+    q2.enqueue(1)
+    q2.dequeue()    # head should now be at 1
+    q2.enqueue(2)    # tail should now be at 0
+    q2.checkRep()
 
 test()
 
