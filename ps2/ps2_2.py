@@ -140,7 +140,25 @@ class SplayTree:
 # full statement coverage on the SplayTree class.
 def test():
     ###Your code here.
-    pass
+    st = SplayTree()
+    st.insert(37)
+    st.insert(36)
+    st.insert(35)
+    st.insert(37)
+    st.insert(38)
+
+    # insert on right first
+    st = SplayTree()
+    st.insert(37)
+    st.insert(38)
+    st.insert(39)
+    st.insert(37)
+    st.insert(38)
+    st.insert(1)
+    st.insert(25)
+    st.insert(20)
+    st.insert(40)
+    st.insert(39)
 
 test()
 
