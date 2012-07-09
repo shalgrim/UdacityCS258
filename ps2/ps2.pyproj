@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{75cac8b7-1c96-4e86-90b6-7af26be31815}</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>ps2_1.py</StartupFile>
+    <StartupFile>ps2_2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
