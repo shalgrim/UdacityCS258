@@ -25,6 +25,8 @@
 # But how about if I add these lines and push from work.  Will it show up with
 # a pull on my home PC?
 
+# blegh, adding a third set of lines
+
 #covered = set()
 
 class Node:
