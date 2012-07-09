@@ -21,6 +21,10 @@
 
 # Ima add a line here at work just for fun to see if I can then get it on my home PC.
 
+# Okay I proved that I could add a line here and it would show up in a clone.
+# But how about if I add these lines and push from work.  Will it show up with
+# a pull on my home PC?
+
 #covered = set()
 
 class Node:
