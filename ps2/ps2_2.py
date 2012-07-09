@@ -19,6 +19,8 @@
 # If you have any questions, please don't hesitate 
 # to ask in the forums!
 
+# Ima add a line here at work just for fun to see if I can then get it on my home PC.
+
 #covered = set()
 
 class Node:
