@@ -27,6 +27,9 @@
 
 # blegh, adding a third set of lines
 
+# Yes, I got the changes here.  Even over the wifi at work
+# So now let's add these lines, push 'em, and see if I can get 'em at work
+
 #covered = set()
 
 class Node:
