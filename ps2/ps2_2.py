@@ -30,6 +30,9 @@
 # Yes, I got the changes here.  Even over the wifi at work
 # So now let's add these lines, push 'em, and see if I can get 'em at work
 
+# adding another set of lines to see if moving my .gitconfig file
+# at work is okay
+
 #covered = set()
 
 class Node:
