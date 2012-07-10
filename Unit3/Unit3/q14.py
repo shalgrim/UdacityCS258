@@ -29,8 +29,12 @@ def is_luhn_valid(n):
 
     modDigs = copy.copy(origDigs)
     for i in range(len(modDigs)-2, -1, -2):
-        #print 'i: %d'%(i)
-        modDigs[i] = (modDigs[i]*2)%10
+        doubled = modDigs[i]*2
+        if doubled > 9:
+            modDigs[i] = doubled - 9
+        else:
+            modDigs[i] = doubled
+
     #print modDigs
     total = sum(modDigs)
 
@@ -43,11 +47,16 @@ def is_luhn_valid(n):
 #print 0, is_luhn_valid(0)
 #print 5, is_luhn_valid(5)
 #print 50, is_luhn_valid(50)
+#print 42, is_luhn_valid(42)
 #print 55, is_luhn_valid(55)
 #print 999, is_luhn_valid(999)
 #print 500, is_luhn_valid(500)
 #print 505, is_luhn_valid(505)
 #print 5000, is_luhn_valid(5000)
+#print 4002, is_luhn_valid(4002)
+#print 8003, is_luhn_valid(8003)
+#print 4003, is_luhn_valid(4003)
+#print 8004, is_luhn_valid(8004)
 #print 5005, is_luhn_valid(5005)
 #print 50000, is_luhn_valid(50000)
 
