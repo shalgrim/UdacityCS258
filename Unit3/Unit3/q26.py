@@ -70,7 +70,29 @@ class Queue:
 
 # Write a random tester for the Queue class.
 def test():
-    pass
+    qmax = 500
+    q = Queue(qmax)
+    qlist = list()
+
+    for i in xrange(100000):
+        if (random.random() < 0.5):
+            full = q.full()
+            assert full == (len(qlist) == qmax)
+            rnum = int(random.uniform(0,100000))
+            res = q.enqueue(rnum)
+            q.checkRep()
+            assert full != res
+
+            if res:
+                qlist.append(rnum)
+        else:
+            empty = q.empty()
+            assert empty == (len(qlist) == 0)
+            res = q.dequeue()
+            q.checkRep ()
+            if empty:
+                assert res is None
+            else:
+                assert res == qlist.pop()
 
 test()
-
