@@ -84,7 +84,7 @@ def test():
             assert full != res
 
             if res:
-                qlist.append(rnum)
+                qlist.insert(0, rnum)
         else:
             empty = q.empty()
             assert empty == (len(qlist) == 0)
@@ -92,6 +92,7 @@ def test():
             q.checkRep ()
             if empty:
                 assert res is None
+                assert len(qlist) == 0
             else:
                 assert res == qlist.pop()
 
