@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{03b0150b-a91f-4ac5-af3a-8d206a49d27c}</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>q14.py</StartupFile>
+    <StartupFile>q26.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="q14.py" />
+    <Compile Include="q26.py" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
 </Project>
