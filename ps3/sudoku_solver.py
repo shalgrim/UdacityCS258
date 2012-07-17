@@ -73,15 +73,15 @@ easy = [[2,9,0,0,0,0,0,7,0],
 # it locally if you'd like to test 
 # your solution with it.
 # 
-# hard = [[1,0,0,0,0,7,0,9,0],
-#         [0,3,0,0,2,0,0,0,8],
-#         [0,0,9,6,0,0,5,0,0],
-#         [0,0,5,3,0,0,9,0,0],
-#         [0,1,0,0,8,0,0,0,2],
-#         [6,0,0,0,0,4,0,0,0],
-#         [3,0,0,0,0,0,0,1,0],
-#         [0,4,0,0,0,0,0,0,7],
-#         [0,0,7,0,0,0,3,0,0]]
+hard = [[1,0,0,0,0,7,0,9,0],
+         [0,3,0,0,2,0,0,0,8],
+         [0,0,9,6,0,0,5,0,0],
+         [0,0,5,3,0,0,9,0,0],
+         [0,1,0,0,8,0,0,0,2],
+         [6,0,0,0,0,4,0,0,0],
+         [3,0,0,0,0,0,0,1,0],
+         [0,4,0,0,0,0,0,0,7],
+         [0,0,7,0,0,0,3,0,0]]
 
 possibles = set([i for i in range(1,10)])
 
@@ -104,6 +104,7 @@ def solve_sudoku (grid):
                     break
             else:
                 # could not find solutions
+                row[zind] = 0
                 answer = False
                 break
         else:
@@ -112,10 +113,10 @@ def solve_sudoku (grid):
 
     return answer
 
-#print solve_sudoku(ill_formed) # --> none
-#print solve_sudoku(valid)      # --> true
-#print solve_sudoku(invalid)    # --> false
+print solve_sudoku(ill_formed) # --> none
+print solve_sudoku(valid)      # --> true
+print solve_sudoku(invalid)    # --> false
 print solve_sudoku(easy)       # --> true
-#print check_sudoku(hard)       # --> true
+#print solve_sudoku(hard)       # --> true
 raw_input()
 
