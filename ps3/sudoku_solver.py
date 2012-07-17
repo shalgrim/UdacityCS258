@@ -16,6 +16,9 @@
 # A solve_sudoku() in this style can be implemented in about 16 lines
 # without making any particular effort to write concise code.
 
+from sudoku_checker import check_sudoku
+import copy
+
 # solve_sudoku should return None
 ill_formed = [[5,3,4,6,7,8,9,1,2],
               [6,7,2,1,9,5,3,4,8],
@@ -80,7 +83,39 @@ easy = [[2,9,0,0,0,0,0,7,0],
 #         [0,4,0,0,0,0,0,0,7],
 #         [0,0,7,0,0,0,3,0,0]]
 
+possibles = set([i for i in range(1,10)])
+
 def solve_sudoku (grid):
     ###Your code here.
-    pass
+    answer = check_sudoku(grid)
+    if answer:
+        for row in grid:
+            if 0 not in row:
+                continue
+            zind = row.index(0)
+            inrow = set(row)
+            diff = possibles.difference(inrow)
+            for poss in sorted(list(diff)):
+                row[zind] = poss
+
+                if solve_sudoku(grid):
+                    # found solution
+                    answer = grid
+                    break
+            else:
+                # could not find solutions
+                answer = False
+                break
+        else:
+            # came in solved
+            answer = grid
+
+    return answer
+
+#print solve_sudoku(ill_formed) # --> none
+#print solve_sudoku(valid)      # --> true
+#print solve_sudoku(invalid)    # --> false
+print solve_sudoku(easy)       # --> true
+#print check_sudoku(hard)       # --> true
+raw_input()
 

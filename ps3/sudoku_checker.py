@@ -160,10 +160,10 @@ def check_sudoku(grid):
      
     pass
 
-print check_sudoku(ill_formed) # --> None
-print check_sudoku(valid)      # --> True
-print check_sudoku(invalid)    # --> False
-print check_sudoku(easy)       # --> True
-print check_sudoku(hard)       # --> True
-#raw_input()
+#print check_sudoku(ill_formed) # --> None
+#print check_sudoku(valid)      # --> True
+#print check_sudoku(invalid)    # --> False
+#print check_sudoku(easy)       # --> True
+#print check_sudoku(hard)       # --> True
+##raw_input()
 

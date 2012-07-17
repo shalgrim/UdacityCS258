@@ -1,0 +1,8 @@
+*.pyc
+*.suo
+*.suo
+<<<<<<< HEAD
+*.suo
+=======
+ps2/ps2.suo
+>>>>>>> 06da331963c57cab7e06a872b9a0fbf7f56f5202
