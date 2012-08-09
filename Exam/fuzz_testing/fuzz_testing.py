@@ -28,7 +28,19 @@ In hac habitasse platea dictumst. Morbi et leo enim.
 Aenean ipsum ipsum, laoreet vel cursus a, tincidunt ultrices augue.
 Aliquam ac erat eget nunc lacinia imperdiet vel id nulla."""
 
+def getRandomByte():
+    return int(256*random.random())
 
 def fuzzit(content):
 # Write a random fuzzer for a simulated text viewer application
-    pass
+    answer = []
+    for i in xrange(1000):
+        percentToChange = random.random()
+        ba = bytearray(content)
+        for j in xrange(len(ba)):
+            if random.random() < percentToChange:
+                ba[j] = getRandomByte()
+        answer.append(str(ba))
+    return answer
+
+#fuzzit(content)
