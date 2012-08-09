@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "fuzz_testing", "fuzz_testing.pyproj", "{A9ED1A2B-4047-4613-A956-028589E24329}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9ED1A2B-4047-4613-A956-028589E24329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9ED1A2B-4047-4613-A956-028589E24329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
