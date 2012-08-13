@@ -96,6 +96,39 @@ class Queue:
             assert (self
                     .size==0) or (self.size==self.max)    
 
+def getInput():
+    input = int(random.random() * 1000000)
+
+    return input
+
 
 def random_test():
 # Write a random tester for the Queue class
+    answer = []
+
+    # equal probs enqueue/dequeue
+    q = Queue(500)
+
+    for i in xrange(100000):
+        if (random.random() < 0.5):
+            input = getInput()
+            q.enqueue(input)
+            try:
+                q.checkRep()
+                answer.append((input, 0))
+            except AssertionError:
+                answer.append((input, 1))
+
+        else:
+            q.dequeue()
+            try:
+                q.checkRep()
+                answer.append(('dq', 0))
+            except AssertionError:
+                answer.append(('dq', 1))
+
+    return answer
+
+if __name__ == '__main__':
+    print random_test()
+    raw_input()
