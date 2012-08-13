@@ -92,3 +92,30 @@ class Queue:
 
 # Provide full statement and parameter value coverage of the Queue class
 def test():
+    q = Queue(5)
+    q.clear()
+    q.empty()
+    q.full()
+    q.checkRep()
+    q.dequeue()
+    q.enqueue(5.55)
+    q.enqueue(1)
+    q.checkRep()
+    q.enqueue(2)
+    q.enqueue('c')
+    q.enqueue(True)
+    q.enqueue(5)
+    q.enqueue('full')
+    q.dequeue()
+    q.checkRep()
+    print str(q)
+    
+    for i in range(4):
+        q.dequeue()
+
+    q.enqueueall([1, 2])
+    q.enqueueall([3, 4, 5, 6])
+    q.enqueueall(1)
+
+
+#test()
