@@ -24,7 +24,7 @@ class Queue:
     
     def __init__(self,size_max):
         assert size_max > 0
-        self.max = size_max - 1
+        self.max = size_max
         self.head = 0
         self.tail = 0
         self.size = 0
@@ -37,7 +37,7 @@ class Queue:
         return self.size == self.max
 
     def enqueue(self,x):
-        x = x % 1000
+        #assert isinstance(x, int)
         self.data[self.tail] = x
         self.size += 1
         self.tail += 1
@@ -46,6 +46,8 @@ class Queue:
         return True
 
     def dequeue(self):
+        if self.empty():
+            return None
         x = self.data[self.head]
         self.size -= 1
         self.head += 1
@@ -91,5 +93,25 @@ inpts = [(574, 0), ('dq', 0), (991, 0), ('dq', 0), ('dq', 1),
 
 
 # Write a regression tester for the Queue class
-def regression_test():
+def regression_test(inputlist):
+    q = Queue(500)
+    mylist = list()
 
+    for a, b in inputlist:
+        print a, b
+        if a == 'dq':
+            x = q.dequeue()
+            q.checkRep()
+            if len(mylist) == 0:
+                y = None
+            else:
+                y = mylist.pop()
+            assert x == y
+        else:
+            x = q.enqueue(b)
+            q.checkRep()
+            assert x
+            mylist.append(b)
+
+#regression_test(inpts)
+#raw_input()
